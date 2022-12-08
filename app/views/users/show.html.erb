@@ -1,1 +1,24 @@
 <p>Here is a details of a given user</p>
+
+<div class ='user'>
+  <img class="user_img" src=<%= @user.photo %> alt=<%= @user.name %> />
+  <%= render "share/user",   user: @user  %>
+</div>
+
+<div class = details>
+  <div class = 'bio'>
+    <h2>Bio</h2>
+    <p><%= @user.bio  %></p>
+  </div>
+
+   <% @user.posts.each do |post, index| %>
+     <div class='user_posts'>
+      <%= render "share/posts",   post: post %>
+    </div>
+   <% end %>
+
+ <a class="see-btn" href="/users/<%= @user.id %>/posts">
+        See all posts
+ </a>
+
+</div>
