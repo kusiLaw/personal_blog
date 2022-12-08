@@ -134,3 +134,8 @@ body {
   right: 2rem;
   top: 1rem;
 }
+
+a.home-name:hover {
+  color: blue;
+  text-decoration: underline;
+}
