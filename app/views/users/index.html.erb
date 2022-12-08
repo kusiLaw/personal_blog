@@ -1,3 +1,19 @@
-<h1>Users#index</h1>
-<p>Here is a list of all users</p>
-<%= @users%>
+
+  <% @users.each do |user| %>
+    <div class ='user'>
+       <a  href="users/<%= user.id %>">
+            <img class="user_img" src=<%= user.photo %> alt=<%= user.name %> />
+       </a>
+       <div class='user-info'> 
+         <div class= 'user-name'>
+
+           <h2 ><a class="home-name" href="users/<%= user.id %>"><%= user.name %></a></h2> 
+         </div>
+         
+         <p class= 'user-extra' >Number of posts  <%= user.posts.size %></p>   
+       </div>
+    </div>
+  <% end %>
+
+
+ 

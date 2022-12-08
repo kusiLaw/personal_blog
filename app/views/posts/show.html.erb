@@ -1,2 +1,8 @@
-<p>Here is a details of posts for a given user</p>
-
+<div class = 'top-comment'>
+  <div class='post_details'>
+      <%= render "share/posts",   post: @post %>
+      <% @post.retrieve_recent_comments.each do |comment| %>
+          <%=render "share/comments", comment: comment%>
+       <% end %>
+   </div>
+</div>

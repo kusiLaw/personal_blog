@@ -1,2 +1,15 @@
-<h1>Posts#index</h1>
-<p>Here is a list of posts for a given user</p>
+
+<div class ='user'>
+  <img class="user_img" src=<%= @user.photo %> alt=<%= @user.name %> />
+  <%= render "share/user",   user: @user  %>
+</div>
+
+<% @posts.each_with_index do |post, index| %>
+  <div class='post_details'>
+    <%= render "share/posts",   post: post %>
+
+   <% post.comments.each do |comment| %>
+      <%=render "share/comments", comment: comment%>
+   <% end %>
+ </div>
+<% end %>

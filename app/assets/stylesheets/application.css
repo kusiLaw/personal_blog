@@ -13,3 +13,129 @@
  *= require_tree .
  *= require_self
  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  padding: 5rem;
+  min-width: 32rem;
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.user {
+  /* border: 2px solid gray; */
+  margin-bottom: 1.5rem;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.user_img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.user-info {
+  border: 2px solid gray;
+  width: 90%;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.user-name {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.user-name a {
+  text-decoration: none;
+  color: black;
+  cursor: hand;
+}
+
+.user-extra {
+  align-self: flex-end;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+.bio,
+.user_posts,
+.post_details {
+  padding: 1rem;
+  border: 2px solid gray;
+  margin-bottom: 1.5rem;
+}
+
+.post_details {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.details {
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.details a {
+  text-decoration: none;
+}
+
+.see-btn {
+  align-self: center;
+  padding: 1rem;
+  border: 2px solid black;
+  background-color: lightgray;
+  color: black;
+}
+
+.comment-text {
+  padding: 1rem;
+  background-color: rgb(248, 246, 246);
+  border: 1px solid rgb(185, 185, 185);
+  margin-top: 0.5rem;
+}
+
+.like-comments {
+  display: flex;
+
+  /* flex-direction: column; */
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.top-comment #at_top {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+a.home-name:hover {
+  color: blue;
+  text-decoration: underline;
+}
