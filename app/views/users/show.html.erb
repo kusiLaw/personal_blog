@@ -11,7 +11,7 @@
     <p><%= @user.bio  %></p>
   </div>
 
-   <% @user.posts.each do |post, index| %>
+   <% @user.recent_posts.each do |post, index| %>
      <div class='user_posts'>
       <%= render "share/posts",   post: post %>
     </div>

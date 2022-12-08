@@ -19,6 +19,13 @@ frank = User.create(name: 'Frank', photo: 'https://media.istockphoto.com/id/4802
 
 peter_post = Post.create(author: peter, title: 'Story About Peter',
                          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+
+peter_post_two = Post.create(author: peter, title: 'Peter and the Family',
+                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+peter_post_three = Post.create(author: peter, title: 'Peter First Day At School',
+                               text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')                    
+peter_post_four = Post.create(author: peter, title: 'Peter First Daughter',
+                              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
 vida_post = Post.create(author: vida, title: 'Story About Vida',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
 lilly_post = Post.create(author: lilly, title: 'Story About Lilly',
