@@ -18,7 +18,7 @@ frank = User.create(name: 'Frank', photo: 'https://media.istockphoto.com/id/4802
 
 
 peter_post = Post.create(author: peter, title: 'Story About Peter',
-                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
 vida_post = Post.create(author: vida, title: 'Story About Vida',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
 lilly_post = Post.create(author: lilly, title: 'Story About Lilly',
@@ -55,12 +55,18 @@ frank_second_post = Post.create(author: frank, title: 'My Experience as Software
                                 tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
                                 quia')
 
-Comment.create(post: lilly_second_post, author: peter, text: 'Hi Lilly!, psum dolor sit amet consectetur adipisicing elit')
+Comment.create(post: lilly_second_post, author: peter, text: 'Hi Lilly!, psum dolor sit amet consectetur adipisicing')
 Comment.create(post: lilly_second_post, author: frank, text: 'Impedit sit sunt quaerat, odit,
-                                                              tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,')
+                                                              tenetur error, harum nesciunt ipsum debitis quas,')
 
-Comment.create(post: frank_second_post, author: lilly, text: 'Hi Frank!, psum dolor sit amet consectetur adipisicing elit')
-Comment.create(post: frank_second_post, author: vida, text: 'Hello Frank!,Provident similique accusantium nemo autem')
+Comment.create(post: frank_second_post, author: lilly, text: 'Hi Frank!, psum dolor sit amet consectetur adipisicing ')
+Comment.create(post: frank_second_post, author: vida, text: 'Hello Frank!,harum nesciunt ipsum debitis quas aliquid')
+Comment.create(post: frank_second_post, author: peter, text: 'accusantium nemo autem harum nesciunt ipsum  aliquid')
+Comment.create(post: frank_second_post, author: yeboa, text: 'similique accusantium nemo autem Hello Frank!,')
+Comment.create(post: frank_second_post, author: lilly, text: 'Provident similique accusantium nemo autem,')
+Comment.create(post: frank_second_post, author: peter, text: 'harum nesciunt ipsum debitis quas aliquid,')
+
+
 
 Comment.create(post: vida_post, author: yeboa, text: 'Hello Vida!,Provident similique accusantium nemo autem')
 Comment.create(post: yeboa_post, author: lilly, text: 'Hello Yeboad!,Provident similique accusantium nemo autem')
