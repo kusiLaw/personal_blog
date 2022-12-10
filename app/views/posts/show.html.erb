@@ -1,8 +1,10 @@
 <div class = 'top-comment'>
   <div class='post_details'>
       <%= render "share/posts",   post: @post %>
+      <%= render "likes/likes" %>
       <% @post.retrieve_recent_comments.each do |comment| %>
           <%=render "share/comments", comment: comment%>
        <% end %>
+       <%= render "comments/comments" %>
    </div>
 </div>

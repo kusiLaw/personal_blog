@@ -10,6 +10,11 @@
     <h2>Bio</h2>
     <p><%= @user.bio  %></p>
   </div>
+   <% if @current_user.id == @user.id %>
+        <a class="btn post-btn" href="/users/<%= @user.id %>/posts/new">
+          Create New Post
+        </a>
+    <% end %>
 
    <% @user.recent_posts.each do |post, index| %>
      <div class='user_posts'>
