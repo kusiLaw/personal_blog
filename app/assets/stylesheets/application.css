@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
 *,
 *::before,
 *::after {
@@ -140,4 +139,58 @@ body {
 a.home-name:hover {
   color: blue;
   text-decoration: underline;
+}
+
+.create_post_wrapper {
+  display: flex;
+}
+
+.btn_create_post {
+  margin: 2rem;
+  border: 2px solid blue;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 3rem;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.title-text,
+.text-msg {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-newPost {
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+}
+
+.like-btn {
+  padding: 1rem 2rem;
+  margin: 2rem;
+  align-self: flex-end;
+}
+
+.comments_wrapper {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.add-comment-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.commit-btn {
+  padding: 1rem;
+  align-self: flex-start;
 }

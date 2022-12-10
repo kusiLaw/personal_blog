@@ -14,15 +14,17 @@
 
 
 <%= form_with model:  @post do |form| %>
-  <div class="title">
-    <%= form.label :title, "Post Title", class: 'label'%>
-    <%= form.text_field  :title, class: "input" %>
-  </div>
-  <div class="text-box">
-    <%= form.label :text, "Message" %>
-    <%= form.text_area :text, size: "70x5" %>
+  <div class="post-form">
+   <div class="title-text">
+     <%= form.label :title, "Post Title", class: 'label'%>
+     <%= form.text_field  :title, class: "input" %>
    </div>
-  <%= form.submit "Add Question", class: "btn-newPost"%>
+   <div class="text-msg">
+     <%= form.label :text, "Message" %>
+     <%= form.text_area :text, size: "70x5" %>
+    </div>
+   <%= form.submit "Post New", class: "btn-newPost"%>
+  </div>
 <%end%>
 
 
