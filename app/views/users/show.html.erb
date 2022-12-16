@@ -11,6 +11,14 @@
     <p><%= @user.bio  %></p>
   </div>
 
+   <% if @current_user.id == @user.id %>
+       <div class = "create_post_wrapper">
+          <a class="btn_create_post" href="/users/<%= @user.id %>/posts/new">
+            Create New Post
+          </a>
+       </div>
+    <% end %>
+
    <% @user.recent_posts.each do |post, index| %>
      <div class='user_posts'>
       <%= render "share/posts",   post: post %>

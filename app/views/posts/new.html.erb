@@ -1,0 +1,31 @@
+<h2>New Post</h2>
+
+<% if @post.errors.any? %>
+    <div id="error_explanation">
+      <p><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</p>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+ <% end %>
+
+
+<%= form_with model:  @post do |form| %>
+  <div class="post-form">
+   <div class="title-text">
+     <%= form.label :title, "Post Title", class: 'label'%>
+     <%= form.text_field  :title, class: "input" %>
+   </div>
+   <div class="text-msg">
+     <%= form.label :text, "Message" %>
+     <%= form.text_area :text, size: "70x5" %>
+    </div>
+   <%= form.submit "Post New", class: "btn-newPost"%>
+  </div>
+<%end%>
+
+
+
