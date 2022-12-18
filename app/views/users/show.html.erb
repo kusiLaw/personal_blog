@@ -1,4 +1,3 @@
-<p>Here is a details of a given user</p>
 
 <div class ='user'>
   <img class="user_img" src=<%= @user.photo %> alt=<%= @user.name %> />
@@ -13,20 +12,16 @@
 
    <% if @current_user.id == @user.id %>
        <div class = "create_post_wrapper">
-          <a class="btn_create_post" href="/users/<%= @user.id %>/posts/new">
-            Create New Post
-          </a>
+          <%= link_to 'Create New Post', new_user_post_path(@user), class: "btn_create_post" %>
        </div>
     <% end %>
 
    <% @user.recent_posts.each do |post, index| %>
-     <div class='user_posts'>
-      <%= render "share/posts",   post: post %>
+     <div class='user_posts' id='post_number-<%=post.id%>'>
+      <%= render "share/posts",   post: post, writer: false%>
     </div>
    <% end %>
 
- <a class="see-btn" href="/users/<%= @user.id %>/posts">
-        See all posts
- </a>
 
+ <%= link_to 'See all posts', user_posts_path(@user), class: "see-btn" %>
 </div>

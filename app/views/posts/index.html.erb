@@ -4,9 +4,10 @@
   <%= render "share/user",   user: @user  %>
 </div>
 
-<% @posts.each_with_index do |post, index| %>
-  <div class='post_details'>
-    <%= render "share/posts",   post: post %>
+
+<% @user.posts.each do |post| %>
+  <div class='post_details' id='post_body-<%=post.id%>'>
+    <%= render "share/posts",   post: post , writer: false%>
 
    <% post.retrieve_recent_comments.each do |comment| %>
       <%=render "share/comments", comment: comment%>
