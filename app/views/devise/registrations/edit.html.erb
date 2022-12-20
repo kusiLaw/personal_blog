@@ -1,43 +1,61 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class='form-wrapper c-flex'>
+ <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+ <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+   <div class='reg-form c-flex'>
+     <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+     <div class="field">
+       <%= f.label :name, "Name:", class: "label" %><br />
+       <%= f.text_field :name, autofocus: true, placeholder: 'Name', class: 'login-input' %>
+     </div>
+
+      <div class="field">
+       <%= f.label :photo, "Image URL:", class: "label" %><br />
+       <%= f.text_field :photo, autofocus: true, placeholder: 'image url', class: 'login-input' %>
+     </div>
+     
+     <div class="field">
+       <%= f.label :bio, "Bio:", class: "label" %><br />
+       <%= f.text_area :bio, autofocus: true, placeholder: 'Bio', rows: "5", class: 'login-input' %>
+     </div>
+     
+     <div class="field">
+       <%= f.label :email, "Email:", class: "label" %><br />
+       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'login-input' %>
+     </div>
+
+     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+     <% end %>
+
+     <i>(leave blank if you don't want to change it)</i>
+     <div class="field">
+       <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password",class: 'login-input'%>
+       <% if @minimum_password_length %>
+         <br />
+         <em><%= @minimum_password_length %> characters minimum</em>
+       <% end %>
+     </div>
+
+     <div class="field">
+       <%= f.password_field :password_confirmation, autocomplete: "new-password" ,placeholder: "Confirm Password", class: 'login-input'%>
+     </div>
+
+      <i>(we need your current password to confirm your changes)</i>
+     <div class="field">
+       <%= f.password_field :current_password, autocomplete: "current-password",placeholder: "Current Password", class: 'login-input' %>
+     </div>
+
+     <div class="actions">
+       <%= f.submit "Update" %>
+     </div>
+   </div>
+ 
+ <% end %>
+  <div class='reg-base c-flex'>
+
+    <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'del-acc' %></p>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

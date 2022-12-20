@@ -10,7 +10,7 @@
     <p><%= @user.bio  %></p>
   </div>
 
-   <% if @current_user.id == @user.id %>
+   <% if current_user.id == @user.id %>
        <div class = "create_post_wrapper">
           <%= link_to 'Create New Post', new_user_post_path(@user), class: "btn_create_post" %>
        </div>

@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+ 
   # get 'posts/index'
-  # get 'users/index'
+  # get 'users/sign_out', to: 'users#sign_out'
+
   root 'users#index'
+
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index show new create] do
       resources :comments, only: %i[new create]
