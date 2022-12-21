@@ -3,12 +3,10 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :permitted_parameters, if: :devise_controller?
 
-
-  def after_sign_out_path_for(_resource_or_scope)   
-    request.referrer  
-    '/users/sign_in' 
-   end
-
+  def after_sign_out_path_for(_resource_or_scope)
+    request.referrer
+    '/users/sign_in'
+  end
 
   protected
 
