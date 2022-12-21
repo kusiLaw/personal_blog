@@ -71,12 +71,6 @@ body {
   align-items: center;
 }
 
-.user-name a {
-  text-decoration: none;
-  color: black;
-  cursor: hand;
-}
-
 .user-extra {
   align-self: flex-end;
   font-style: italic;
@@ -101,10 +95,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.details a {
-  text-decoration: none;
 }
 
 .see-btn {
@@ -134,11 +124,6 @@ body {
   position: absolute;
   right: 2rem;
   top: 1rem;
-}
-
-a.home-name:hover {
-  color: blue;
-  text-decoration: underline;
 }
 
 .create_post_wrapper {
@@ -193,4 +178,138 @@ a.home-name:hover {
 .commit-btn {
   padding: 1rem;
   align-self: flex-start;
+}
+
+.flex,
+.c-flex {
+  display: flex;
+}
+
+.c-flex {
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+
+  /* border: 1px solid gray; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header-avatar {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.edit-profile {
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wraper {
+  margin: 3rem 0;
+  align-items: center;
+  height: auto;
+}
+
+.login-form {
+  width: 70%;
+  gap: 2rem;
+  padding: 1rem;
+  height: auto;
+}
+
+.field,
+.actions {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.actions input {
+  padding: 0.6rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.login-options {
+  font-size: smaller;
+  color: black;
+  width: 68%;
+  padding-top: 1.5rem;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.details a {
+  text-decoration: none;
+}
+
+.user-name a {
+  text-decoration: none;
+  color: black;
+  cursor: hand;
+}
+
+a.home-name:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.login-options a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.form-wrapper {
+  align-items: center;
+}
+
+.reg-form {
+  margin-top: 1rem;
+}
+
+.reg-form .field {
+  width: 100%;
+}
+
+.field em,
+i {
+  margin-bottom: 0.5rem;
+  font-size: x-small;
+  font-style: italic;
+}
+
+.reg-base {
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.del-acc {
+  background-color: #f75252;
+  color: white;
+  padding: 1rem;
 }

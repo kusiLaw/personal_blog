@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+<nav class='flex'>
+  <header>
+   <h1> <%= link_to "Discuss Blog", root_path, class: "logo" %></h1>
+  </header>
+  <div class='profile flex'>
+    <%= link_to "home", root_path, class: "logo" %>
+        <div class='flex edit-profile'>
+         <a href=<%= user_path(current_user) %> >
+           <img src="<%= current_user.photo %>" alt=<%= current_user.name %> class="header-avatar"/>
+         </a>
+         <%= link_to "Edit Profile", edit_user_registration_path, class: "link" %>
+       </div>
+       <%= button_to "Sign Out", destroy_user_session_path, method: :delete , class: "link" %>
+  </div>
+</nav>
+<% end %>
