@@ -30,7 +30,7 @@ class PostsController < ApplicationController
       flash[:error] = 'Oops something went wrong!, please try again'
     end
     if current_user.role == 'admin'
-      redirect_to user_posts_path(@post.author, @post)
+      redirect_to user_posts_path(@post.author)
     else
       redirect_to user_posts_path(current_user)
     end

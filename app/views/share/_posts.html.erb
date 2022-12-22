@@ -16,7 +16,8 @@
     <%if postDetails %>
      <div class='flex del-wrap'>
       <%if  can? :destroy, @post %>
-          <%= button_to "Delete Post", @post, method: :delete, class: "del-btn"%>
+          <%#= button_to "Delete Post", @post, method: :delete, class: "del-btn"%>
+          <%= button_to "Delete Post", user_post_path, method: :delete, class: "del-btn"%>
        <% end %>  
      </div>
     <%end%>
