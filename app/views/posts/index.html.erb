@@ -7,7 +7,7 @@
 
 <% @user.posts.each do |post| %>
   <div class='post_details' id='post_body-<%=post.id%>'>
-    <%= render "share/posts",   post: post , writer: false%>
+    <%= render "share/posts",   post: post , postDetails: false%>
 
 
    <% post.retrieve_recent_comments.each do |comment| %>

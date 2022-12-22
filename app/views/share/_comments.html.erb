@@ -1,3 +1,10 @@
 <div class='comment-text'>
    <p ><span><%= comment.author.name %></span> <span>Comments: <%= comment.text %></span> </p>     
+   <div class='flex del-wrap'>
+      <% if can? :destroy, @post %>
+        <div class="clicks">
+            <%= button_to "Delete",user_post_comment_path(@user, @post, comment), method: :delete, class: "del-btn"%>
+        </div>
+      <% end %>
+  </div>
 </div>
