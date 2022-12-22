@@ -1,10 +1,10 @@
-<div class='post' >
+<div class='post c-flex' >
    <div class='post_number'>
       <a  href="<%=user_post_path(@user.id, post.id) %>">
       <h2><%= post.title %>
-      <%if writer%>
-        <span id> by  <%= @user.name %></span>
-      <%end%>
+        <%if postDetails %>
+          <span id class='written-by'> by  <%= @user.name %></span>
+        <%end%>
       </h2>
       </a> 
    </div> 
@@ -13,6 +13,14 @@
       <p id = "at_top"><span>Comments: <%= post.comments_counter %></span> 
        <span>Likes: <%= post.likes_counter %></span></p>
    </div>
+    <%if postDetails %>
+     <div class='flex del-wrap'>
+      <%if  can? :destroy, @post %>
+          <%#= button_to "Delete Post", @post, method: :delete, class: "del-btn"%>
+          <%= button_to "Delete Post", user_post_path, method: :delete, class: "del-btn"%>
+       <% end %>  
+     </div>
+    <%end%>
 </div>
 
 

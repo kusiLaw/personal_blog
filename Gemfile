@@ -5,6 +5,7 @@ ruby '3.1.2'
 gem 'bootstrap', '~> 5.0'
 gem 'bootstrap_form', '~> 5.1'
 gem 'bullet', group: 'development'
+gem 'cancancan'
 gem 'devise'
 gem 'letter_opener', group: :development
 gem 'rubocop', '>= 1.0', '< 2.0'

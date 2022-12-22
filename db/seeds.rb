@@ -4,7 +4,7 @@
 # Examples:
 vida = User.create(name: 'Vida', photo: 'https://media.istockphoto.com/id/856599656/photo/passport-picture-of-a-smiling-turkish-businesswoman.jpg?s=612x612&w=0&k=20&c=dgETy-9neViQs7SATDTOOa80QOhVFcLIomBFRxWVN_8=',
                    bio: 'Lawyer from Mexico.', email: 'vida@gmail.com', password: 'vida12345',
-                   password_confirmation: 'vida12345')
+                   password_confirmation: 'vida12345', role: 'admin')
 lilly = User.create(name: 'Lilly', photo: 'https://www.persofoto.com/images/vorher-nachher/passfoto-beispiel-nachher.jpg',
                     bio: 'Teacher from Poland.', email: 'lilly@gmail.com', password: 'lilly123',
                     password_confirmation: 'lilly123')

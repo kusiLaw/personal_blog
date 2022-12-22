@@ -4,17 +4,30 @@ class CommentsController < ApplicationController
   end
 
   def create
-    author = current_user
     post = Post.find(params[:post_id])
-
     @comment = Comment.new(comment_params)
-    @comment.author = author
+    @comment.author = current_user
     @comment.post = post
     if @comment.save
       flash[:success] = 'Comment Added successfully!'
-      redirect_to "/users/#{author.id}/posts/#{post.id}"
+      redirect_to user_post_path(current_user, post)
     else
       flash[:error] = 'Something went wrong! Comment not added!'
+    end
+  end
+
+  def destroy
+    post = Post.find(params[:post_id])
+    comment = Comment.find(params[:id])
+    if comment.destroy
+      flash[:notice] = 'Comment was deleted successfully'
+    else
+      flash[:error] = 'Something went wrong! Comment was not deleted'
+    end
+    if current_user.role == 'admin'
+      redirect_to user_post_path(post.author, post)
+    else
+      redirect_to user_post_path(current_user, post)
     end
   end
 

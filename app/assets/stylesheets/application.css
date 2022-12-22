@@ -308,8 +308,20 @@ i {
   gap: 1rem;
 }
 
+.del-btn,
 .del-acc {
   background-color: #f75252;
   color: white;
+}
+
+.del-acc {
   padding: 1rem;
+}
+
+.del-wrap {
+  justify-content: flex-end;
+}
+
+.del-btn {
+  padding: 0.2rem;
 }

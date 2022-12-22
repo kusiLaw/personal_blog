@@ -18,7 +18,7 @@
 
    <% @user.recent_posts.each do |post, index| %>
      <div class='user_posts' id='post_number-<%=post.id%>'>
-      <%= render "share/posts",   post: post, writer: false%>
+      <%= render "share/posts",   post: post, postDetails: false%>
     </div>
    <% end %>
 
