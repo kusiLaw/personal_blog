@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
     # Define abilities for the user here. For example:
     #
-      return unless user.present?
+    # return unless user.present?
     #   can :read, :all
     #   return unless user.admin?
     #   can :manage, :all
@@ -28,5 +26,15 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
+
+    user ||= User.new
+
+    can :read, :all
+    can :create, :all
+    can :destroy, Post, author: user
+    can :destroy, Comment, author: user
+    return unless user.is?(:admin)
+
+    can :manage, :all
   end
 end
