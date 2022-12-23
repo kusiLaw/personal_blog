@@ -15,7 +15,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -25,22 +25,24 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Personal blog  <a name="about-project"></a>
+# 📖 Discuss Blog  <a name="about-project"></a>
 
-> Personal blog website is a website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+> Discuss blog website is a website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 
 ## 🛠 Built With <a name="built-with"></a>
-- Ruby on rails
+
 
 ### Tech Stack <a name="tech-stack"></a>
-- Ruby
-- Ruby on rails
-- javascript
-- CSS
 
 <details>
-  <summary>Client</summary>
+  <summary>Language</summary>
+  <ul>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Framwork</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Rails</a></li>
   </ul>
@@ -60,13 +62,23 @@
   </ul>
 </details>
 
+<details>
+<summary>Test Library</summary>
+  <ul>
+    <li><a href="https://rspec.info/">RSpec</a></li>
+  </ul>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **User can create a post**
-- **User can be comment a post by another user**
-- **Like can recieves likes**
+- Create new blog user
+- Post articles
+- Comment on articles of the blog
+- Like articles and comments 
+- View users, articles, comments and likes
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,8 +143,8 @@ To run tests, run the following command:
 
 ### Deployment
 
-You can deploy this project using:
-
+You can deploy this project following this instructions:
+[Read](https://www.theodinproject.com/lessons/ruby-on-rails-preparing-for-deployment)
 <!--
 Example:
 
@@ -157,6 +169,26 @@ Example:
 - Twitter: [kibirigejohn005](https://twitter.com/kibirigejohn005)
 - LinkedIn: [Kibirige John](https://www.linkedin.com/in/kibirigejohn005/)
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> These are features that will be add to the project..
+
+- [X] Creating a data model 
+- [x] Processing data in models 
+- [x] Validations and Model specs 
+- [x] Setup and controllers
+- [x] Controllers specs
+- [x] Views
+- [x] Add forms
+- [x] Integration specs for Views and fixing n+1 problems
+- [x] Add Devise
+- [x] Add authorization rules
+- [x] Add API endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
