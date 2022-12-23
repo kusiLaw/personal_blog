@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
+gem 'active_model_serializers', '~> 0.10.2'
 gem 'bootstrap', '~> 5.0'
 gem 'bootstrap_form', '~> 5.1'
 gem 'bullet', group: 'development'
