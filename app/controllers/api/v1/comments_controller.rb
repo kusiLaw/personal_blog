@@ -1,5 +1,4 @@
 class Api::V1::CommentsController < Api::V1::ApplicationController
-
   def index
     @post = Post.find(params[:post_id])
     render json: @post.comments
@@ -22,9 +21,9 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
     end
   end
 
-   private
+  private
 
-   def comment_params
+  def comment_params
     params.permit(:text)
   end
 end
