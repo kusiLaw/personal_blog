@@ -11,7 +11,6 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
 
   def create
     author = User.find_by_api_token(params[:api_token])
-    p params, 'erlwerwerwe------------------------fgrfgfgdfdgdf'
     post = Post.find(params[:post_id])
     comment = Comment.new(comment_params)
     comment.author = author

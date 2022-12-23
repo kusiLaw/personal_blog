@@ -41,11 +41,7 @@ class Api::V1::PostsController < Api::V1::ApplicationController
     @post = set_user.posts.find(params[:id])
   end
 
-  # def post_params
-  #   params.require(:post).permit(:title, :text)
-  # end
-
   def post_params
-    params.require(:posts).permit(:title, :text)
+    params.permit(:title, :text)
   end
 end

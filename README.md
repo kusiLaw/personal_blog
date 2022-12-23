@@ -152,7 +152,10 @@ Example:
  - Twitter: [@Twitterhandle](https://twitter.com/kusilaw)
  - Linkedin: [Linkedin](https://www.linkedin.com/in/lawrence-kusi-55a662104)
 
-
+👤 **Kibirige John**
+- Github: [John-Kibrige](https://github.com/John-Kibirige)
+- Twitter: [kibirigejohn005](https://twitter.com/kibirigejohn005)
+- LinkedIn: [Kibirige John](https://www.linkedin.com/in/kibirigejohn005/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
