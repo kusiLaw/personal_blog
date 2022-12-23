@@ -11,6 +11,8 @@ class User < ApplicationRecord
   validates :name, presence: true, allow_blank: false, allow_nil: false, length: { in: 1..25 }
   validates :posts_counter, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+  after_create :add_api_token
+
   # User::Roles
   # The available roles
   ROLES = %i[admin default].freeze
@@ -21,5 +23,11 @@ class User < ApplicationRecord
 
   def recent_posts
     posts.order(created_at: :desc).limit(3)
+  end
+
+  private
+
+  def add_api_token
+    update_column(:api_token, SecureRandom.base64(10))
   end
 end

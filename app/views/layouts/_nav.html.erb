@@ -5,6 +5,7 @@
   </header>
   <div class='profile flex'>
     <%= link_to "home", root_path, class: "logo" %>
+    <%= link_to "Get API Token", token_api_path, class: "logo" %>
         <div class='flex edit-profile'>
          <a href=<%= user_path(current_user) %> >
            <img src="<%= current_user.photo %>" alt=<%= current_user.name %> class="header-avatar"/>
